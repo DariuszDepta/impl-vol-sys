@@ -1,0 +1,15 @@
+[package]
+name = "impl-vol-sys"
+version = "0.0.1"
+authors = ["Dariusz Depta <dariusz.depta@engos.software>"]
+description = "Implied volatility bindings"
+documentation = "https://docs.rs/impl-vol-sys"
+repository = "git@github.com:DariuszDepta/impl-vol-sys.git"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+libc = "0.2.112"
+
+[build-dependencies]
+cc = "1.0.72"

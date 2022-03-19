@@ -1,2 +1,1 @@
-# impl-vol-sys
-Implied volatility bindings
+# Implied volatility bindings
