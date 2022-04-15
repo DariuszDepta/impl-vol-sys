@@ -11,17 +11,17 @@ extern "C" {
 }
 
 pub fn iv_normalised_vega(x: f64, s: f64) -> f64 {
-  unsafe { normalised_vega(c_double::from(x), c_double::from(s)) }
+  unsafe { normalised_vega(x, s) }
 }
 
 pub fn iv_implied_volatility(price: f64, forward: f64, strike: f64, time: f64, quote: f64) -> f64 {
   unsafe {
     implied_volatility_from_a_transformed_rational_guess(
-      c_double::from(price),
-      c_double::from(forward),
-      c_double::from(strike),
-      c_double::from(time),
-      c_double::from(quote),
+      price,
+      forward,
+      strike,
+      time,
+      quote,
     )
   }
 }
