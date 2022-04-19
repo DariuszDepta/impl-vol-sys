@@ -1,4 +1,4 @@
-use impl_vol_sys::iv;
+use impl_vol_sys::*;
 
 fn eq(expected: f64, actual: f64) {
   assert!(
@@ -7,6 +7,32 @@ fn eq(expected: f64, actual: f64) {
     expected,
     actual
   );
+}
+
+fn iv(
+  price: f64,
+  underlying: f64,
+  strike: f64,
+  r: f64,
+  q: f64,
+  t: f64,
+  flag: char,
+) -> f64 {
+  iv_implied_volatility_from_a_transformed_rational_guess(
+    price / (-r * t).exp(),
+    underlying * ((r - q) * t).exp(),
+    strike,
+    t,
+    binary_flag(flag),
+  )
+}
+
+fn binary_flag(ch: char) -> f64 {
+  match ch {
+    'c' => 1.0,
+    'p' => -1.0,
+    _ => 1.0,
+  }
 }
 
 #[test]
