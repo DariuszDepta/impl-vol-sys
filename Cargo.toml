@@ -1,6 +1,6 @@
 [package]
 name = "impl-vol-sys"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["Dariusz Depta <dariusz.depta@engos.software>"]
 description = "Implied volatility bindings"
 documentation = "https://docs.rs/impl-vol-sys"

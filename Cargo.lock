@@ -64,7 +64,7 @@ dependencies = [
 
 [[package]]
 name = "impl-vol-sys"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
  "cxx",
  "cxx-build",
